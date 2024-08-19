@@ -3,82 +3,99 @@ import '../details/detail.css'
 
 const Detail = () => {
   return (
-    <div className='detail' >
-      <div className="user">
-        <img src="/picture/avatar.png" alt="" />
-        <h2>Jane Doe</h2>
-        <p>Lorem ipsum dolor, sit amet.</p>
+    <div className='detail'>
+  <div className="user">
+    <div className="text-user">
+      <h2>Adoifa</h2>
+      <p>last seen recently</p>
+    </div>
+  </div>
+  <div className="info">
+    <div className="option">
+      <div className="title">
+        <p>Phone</p>
+        <span>+123456789</span>
+      </div>
+    </div>
+    <div className="option">
+      <div className="title">
+        <p>Username</p>
+        <span>@adoifa</span>
+      </div>
+    </div>
+    <div className="option">
+      <div className="title togg">
+        <p>Notifications</p>
+        <div className="toggle-switch">
+          <input type="checkbox" id="toggle" className="toggle-input" />
+          <label htmlFor="toggle" className="toggle-label"></label>
         </div>
-        <div className="info">
-          <div className="option">
-            <div className="title">
-              <span>
-                Chat Setting
-              </span>
-              <img src="/picture/arrowUp.png" alt="" />
+      </div>
+      <div className="photos">
+        <div className="photoitem">
+          <div className="photodetail">
+            <p className='active'>Media</p>
+            <p>Files</p>
+            <p>Links</p>
+            <p>Music</p>
+            <p>Voice</p>
+            <p>Group</p>
+          </div>
+        </div>
+        <div className="im">
+            <div className="pic">
+          <div className="photoitem">
+            <div className="photodetail">
+              <img src="/picture/msgimg.jpg" alt="" />
             </div>
           </div>
-          <div className="option">
-            <div className="title">
-              <span>
-                Privacy & help
-              </span>
-              <img src="/picture/arrowUp.png" alt="" />
+        </div>
+        <div className="pic">
+          <div className="photoitem">
+            <div className="photodetail">
+              <img src="/picture/msgimg.jpg" alt="" />
             </div>
           </div>
-          <div className="option">
-            <div className="title">
-              <span>
-                Shared photos
-              </span>
-              <img src="/picture/arrowDown.png" alt="" />
-            </div>
-            <div className="photos">
-              <div className="photoitem">
-                <div className="photodetail">
-                  <img src="/picture/msgimg.jpg" alt="" />
-                <span>
-                  photo_2024_2.png
-                </span>
-                </div>
-                <img className='icon' src="/picture/download.png" alt="" /> 
-              </div>
-              <div className="photoitem">
-                <div className="photodetail">
-                  <img src="/picture/msgimg.jpg" alt="" />
-                <span>
-                  photo_2024_2.png
-                </span>
-                </div>
-                <img className='icon' src="/picture/download.png" alt="" /> 
-              </div>
-              <div className="photoitem">
-                <div className="photodetail">
-                  <img src="/picture/msgimg.jpg" alt="" />
-                <span>
-                  photo_2024_2.png
-                </span>
-                </div>
-                <img className='icon' src="/picture/download.png" alt="" /> 
-              </div>
+        </div>
+        <div className="pic">
+          <div className="photoitem">
+            <div className="photodetail">
+              <img src="/picture/msgimg.jpg" alt="" />
             </div>
           </div>
-          <div className="option">
-            <div className="title">
-              <span>
-                Shared Files
-              </span>
-              <img src="/picture/arrowUp.png" alt="" />
+        </div>
+        <div className="pic">
+          <div className="photoitem">
+            <div className="photodetail">
+              <img src="/picture/msgimg.jpg" alt="" />
             </div>
+          </div>
+        </div>
+        <div className="pic">
+          <div className="photoitem">
+            <div className="photodetail">
+              <img src="/picture/msgimg.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div className="pic">
+          <div className="photoitem">
+            <div className="photodetail">
+              <img src="/picture/msgimg.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div className="option">
           </div>
           <button>
             Block User
           </button>
-          <button className='logout' onClick={()=>auth.signOut()} >
-            Logout
-          </button>
         </div>
-    </div>
+  </div>
+
   )
 }
 

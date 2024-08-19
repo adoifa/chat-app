@@ -1,6 +1,5 @@
 .chatlist {
     flex: 1;
-    /* overflow: scroll; */
     .search{
         display: flex;
         align-items: center;
@@ -10,7 +9,7 @@
 
     .searchBar{
         flex: 1;
-        background-color: rgba(17, 25, 40, 0.5);
+        background-color: #25252a;
         display: flex;
         align-items: center;
         gap: 20px;
@@ -32,9 +31,7 @@
     }
 
     .add{
-        width: 36px;
-        height: 36px;
-        background-color: rgba(17, 25, 40, 0.5);
+        background-color: #25252a;
         padding: 10px;
         border-radius: 10px;
         cursor: pointer;

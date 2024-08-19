@@ -6,6 +6,7 @@ const Chat = () => {
 
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const endRef = useRef(null)
 
@@ -17,25 +18,27 @@ const Chat = () => {
     setText((prev) => prev + e.emoji);
     setOpen(false)
   }
+  
 
   return (
     <div className='chat' >
       <div className="top">
         <div className="user">
           <img src="/picture/avatar.png" alt="" />
-          <div className="texts">
+          <div className="texts"> 
             <span>
-              Jane Doe
+              Adoifa
             </span>
             <p>
-              Lorem ipsum dolor sit amet.
+              @adoifa
             </p>
           </div>
         </div>
         <div className="icons">
+          <img src="/picture/message.png" alt="" />
           <img src="/picture/phone.png" alt="" />
           <img src="/picture/video.png" alt="" />
-          <img src="/picture/info.png" alt="" />
+          <img src="/picture/setting.png" alt="" />
         </div>
       </div>
       <div className="center">
@@ -132,19 +135,17 @@ const Chat = () => {
       </div>
       <div className="bottom">
         <div className="icons">
-         <img src="/picture/img.png" alt="" />
-         <img src="/picture/camera.png" alt="" />
-         <img src="/picture/mic.png" alt="" />
+        <img src="/picture/bro.png" alt="" />
           </div>
            <input type="text" placeholder='Type a message...' value={text} onChange={e => setText(e.target.value)} />
           <div className="emoji">
-            <img src="/picture/emoji.png" alt="" onClick={()=>setOpen((prev) => !prev ) } />
+            <img src='/picture/emoji.svg' alt='' onClick={()=>setOpen((prev) => !prev)} />
             <div className="picker">
              <EmojiPicker open={open} onEmojiClick={handleEmoji} />
             </div>
           </div>
           <button className='sendButton'>
-            Send
+            <img src='/picture/send.png' alt='' />
           </button>
         </div>
       

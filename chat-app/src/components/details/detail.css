@@ -1,19 +1,42 @@
 .detail {
+    background-color: #1a1a1d;
     flex: 1;
+    position: relative;
+    overflow: hidden;
 
     .user{
-        padding: 20px 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        border-bottom: 1px solid #dddddd35;
-
-        img{
-            width: 100px;
-            height: 1;
-            border-radius: cover;
-            object-fit: cover;
+    padding: 8rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #dddddd35;
+    background-image: url('/picture/avatar.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+    
+    .text-user {
+    position: absolute;
+    bottom: 20px;  
+    left: 20px;  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    }
+    
+    .text-user h2,
+    .text-user p {
+        margin: 0;  
+    }
+    
+      h2{
+       color: #f5f5f6;     
+        }
+        p{
+            color: #4d4d54;
         }
     }
     .info{
@@ -23,11 +46,17 @@
         gap: 25px;
 
         .option{
+            color: #4d4d54;
 
             .title{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+                    display: flex;
+                    align-items: center; /* تراز کردن عمودی */
+                    justify-content: space-between; /* قرار دادن نوتیفیکیشن و سوئیچ در دو سمت */
+                    gap: 10px; 
+
+                p{
+                    color: #f5f5f6;
+                }
 
                 img{
                     width: 30px;
@@ -50,15 +79,24 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    flex-wrap: wrap;
+
+                    .active{
+                        color: #1a73e8;
+                        border-bottom: 1px solid #1a73e8; 
+
+                    }
+
                     .photodetail{
                         display: flex;
                         align-items: center;
                         gap: 20px;
                         img{
-                            width: 40px;
-                            height: 40px;
+                            width: 100px;
+                            height: 100px;
                             border-radius: 5px;
                             object-fit: cover;
+                            max-width: 100%;
                         }
 
                         span{
@@ -100,4 +138,75 @@
             }
         }
     }
+
+    .pic{
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    .toggle-switch {
+        display: inline-block;
+        position: relative;
+        width: 60px;  
+        height: 34px;  
+    }
+    
+    .toggle-input {
+        opacity: 0;  
+        width: 0;
+        height: 0;
+    }
+    
+    .toggle-label {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #dddddd35; 
+        border-radius: 34px;
+        transition: background-color 0.3s;
+    }
+    
+    .toggle-label::before {
+        content: "";
+        position: absolute;
+        width: 26px;  
+        height: 26px;  
+        border-radius: 50%;
+        background-color: white;  
+        top: 4px;  
+        left: 4px; 
+        transition: transform 0.3s;
+    }
+    
+    .toggle-input:checked + .toggle-label {
+        background-color: #1a73e8;
+    }
+    
+    .toggle-input:checked + .toggle-label::before {
+        transform: translateX(26px); 
+    }
+
+    .im{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        overflow: auto;
+    }
+
+    .info::-webkit-scrollbar {
+        display: none;
+    }
+
+    .info {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    
 }
+

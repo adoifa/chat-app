@@ -1,17 +1,12 @@
 import '/home/fateme/Documents/react-projects/chat-app/chat-app/src/components/list/info/userinfo.css';
-import { useUserStore } from '../../../lib/userStore';
 
-const Userinfo = () => {
-
-  const {currentUser} = useUserStore()
-
-
+const Userinfo = ({ currentUser }) => {
   return (
     <div className='userinfo'>
       <div className="user">
-        <img src={currentUser.avatar || '/picture/avatar.png'} alt='User Avatar' />
+        <img src={currentUser?.avatar || '/picture/avatar.png'} alt='User Avatar' />
         <h2>
-          {currentUser.username}
+          {currentUser?.username || 'Guest'}
         </h2>
       </div>
       <div className="icons">
@@ -24,3 +19,4 @@ const Userinfo = () => {
 }
 
 export default Userinfo;
+

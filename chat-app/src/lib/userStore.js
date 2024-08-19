@@ -1,23 +1,20 @@
-import { create } from 'zustand';
-import { doc, getDoc } from 'firebase/firestore';
-import { db } from './firebase';
+import { useState, useEffect } from 'react';
 
-const useUserStore = create((set) => ({
-  currentUser: null,
-  isLoading: true,
-  fetchUserInfo: async (uid) => {
-    if (!uid) return;
+const useUserStore = () => {
+  const [currentUser, setCurrentUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-    try {
-      const userDoc = doc(db, 'users', uid);
-      const userSnapshot = await getDoc(userDoc);
-      const userData = userSnapshot.data();
-      set({ currentUser: userData, isLoading: false });
-    } catch (error) {
-      console.error('Error fetching user info:', error);
-      set({ isLoading: false });
-    }
-  },
-}));
+  const fetchUserInfo = (uid) => {
+    // Simulate fetching user data
+    setIsLoading(true);
+    setTimeout(() => {
+      // Fake user data fetch
+      setCurrentUser({ uid, name: 'John Doe' });
+      setIsLoading(false);
+    }, 1000);
+  };
 
-export { useUserStore };
+  return { currentUser, isLoading, fetchUserInfo };
+};
+
+export default useUserStore;

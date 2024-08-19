@@ -34,12 +34,13 @@
                 span{
                     font-size: 18px;
                     font-weight: bold;
+                    color: #f1f2f1;
                 }
 
                 p{
                     font-size: 14px;
                     font-weight: 300;
-                    color: #a5a5a5;
+                    color: #4e4d56;;
                 }
             }
         
@@ -59,10 +60,12 @@
     .center{
         padding: 20px;
         flex: 1;
-        overflow: scroll;
+        overflow: auto;
         display: flex;
         flex-direction: column;
         gap: 2opx;
+
+     
 
         .message{
             max-width: 70%;
@@ -74,7 +77,7 @@
 
                 .texts{
                     p{
-                        background-color: #5183fe;
+                        background-color: #5664f2;
                     }
                 }
             }
@@ -101,15 +104,26 @@
 
                 p{
                     padding: 20px;
-                    background-color: rgba(17, 25, 40, 0.3);
+                    background-color: #1e1f28;
                     border-radius: 10px;
+                    color: #f1f2f1;
                 }
 
                 span{
                     font-size: 13px;
+                    color: #4e4d56;
                 }
             }
         }
+    }
+
+    .center::-webkit-scrollbar {
+        display: none;
+    }
+
+    .center {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 
     .bottom{
@@ -135,7 +149,7 @@
 
         input{
             flex: 1;
-            background-color: rgba(17, 25, 40, 0.5);
+            background-color: #0e0e10;
             border: none;
             outline: none;
             color: #fff;
@@ -146,6 +160,7 @@
 
         .emoji {
             position: relative;
+            z-index: 100;
 
             .picker{
                 position: absolute;
@@ -155,9 +170,10 @@
         }
 
         .sendButton{
-            background-color: #5183fe;
+            background-color: #5664f2;
             color: #fff;
-            padding: 10px 20px;
+            text-align: center;
+            padding: 10px 15px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
