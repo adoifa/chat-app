@@ -1,8 +1,7 @@
-# React + Vite
+# Chat App
+This Chat App is built using React and Vite. It includes features such as:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+User Blocking: Allows users to block others from sending messages.
+User Search: Provides a search function to find specific users in the chat list.
+Send message: It is possible to send a message to the user
+Feel free to explore and contribute!
