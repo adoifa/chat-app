@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import List from './components/list/List';
 import Chat from './components/chat/Chat';
-import Detail from './components/details/Detail';
-import Notification from './components/notif/Notification';
+import ChatList from './components/chatlist/ChatList';
  
 const App = () => {
 
@@ -11,10 +9,10 @@ const App = () => {
     <Router>
       <div className='container'>
         <Routes>
-        <Route path="/" element={<><List /><Chat /><Detail /></>} />
+        <Route path="/" element={<> <ChatList /> <Chat /></>} />
         </Routes>
-        <Notification />
-      </div>
+      </div> 
+     
     </Router>
   );
 };
